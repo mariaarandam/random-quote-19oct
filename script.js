@@ -29,3 +29,12 @@ const quotes = [
         author: " Tyne Daly"
     }
 ];
+
+let quoteSection = document.querySelector(".quote--text")
+let authorSection = document.querySelector(".quote--author")
+
+function changeQuote(){
+    let randomSelection = quotes[Math.floor(Math.random() * quotes.length)];
+    quoteSection.textContent = randomSelection.quote;
+    authorSection.textContent = randomSelection.author;
+}
